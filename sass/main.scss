@@ -1,0 +1,168 @@
+//imports base
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+//imports abstracts
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+//imports pages 
+@import "pages/home";
+//import vendors (third party css)
+@import "vendors/bootstrap";
+
+
+// Title section
+.header {
+    background-color: $bg-color-primary;
+    padding-top: 8vh;
+    &_h1 { //main page title
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3rem;
+        color: white;
+        line-height: 1.5;
+        font-weight: 900;
+    }
+    &__img {  // front Page image container
+        padding-top: 4rem;
+        height: 40vh;
+    }
+    &__img1 { // front Page image 
+        transform: rotate(25deg);
+        width: 80%;
+        position: absolute;
+    }
+    @media (max-width: 992px) {
+        &__img1 {
+            transform: rotate(0);
+            left: 50%; 
+            transform: translate(-50%, 0);
+        }
+        &_h1 {
+         text-align: center;   
+        }
+        &__button-bar {
+            text-align: center;
+        }
+    }
+}
+// Sales pitch 
+.salesPitch {
+    text-align: center;
+    padding: 7% 15%;
+    background-color: white;
+    position: relative;
+    &__customIcon {
+        color:$bg-color-secondary;
+        font-size: 5rem;
+        transition: all 0.3s ease;
+        &:hover {
+            color:$bg-color-primary;
+        }
+    }
+    &__style-h3 {
+        font-size: 1.5rem;
+        font-weight: 900;
+        line-height: 1.5;
+        padding-top: 2%;
+    }
+    &__style-p {
+        padding: 0 1rem;
+        color: $font-color-primary;
+    }
+}
+//testimonials
+.testimonials {
+    text-align: center;
+    background-color: $bg-color-secondary;
+    color: white;
+    position: relative;
+    &__style-h2 {
+        font-family: 'Montserrat-Bold', sans-serif;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 1.5;
+    }
+    &_img {
+        border-radius: 100%;
+        width: 10rem;
+        margin-top: 3vh;
+        margin-right: 2vh;
+    }
+    &__caption {
+        font-size: 1.5rem;
+    }
+}
+// Section - Press
+.press {
+    text-align: center;
+    background-color: $bg-color-secondary;
+    color: white;
+    &__logo {
+        width: 15%;
+        margin: 2vh 1vh 6vh 1vh;
+    }
+}
+// Section - Pricing
+.pricing {
+    padding: 4rem;
+    text-align: center;
+    &__column {
+        padding: 3% 2%;
+    }
+    &__card {
+        padding: 1.5rem;
+    }
+    &__h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.8rem;
+        font-weight: 600;
+        line-height: 1.5;
+    }
+    &__h3 {
+        letter-spacing: 2px;
+    }
+    &__p {
+        color: $font-color-primary;
+        font-size: 1rem;
+    }
+    &__header-p {
+        font-size: 1.3rem;
+    }
+    &__button--light {
+        border-color: $bg-color-primary;
+        color: $bg-color-primary;
+    }
+    &__button--dark {
+        background-color: $bg-color-primary;
+        border-color: $bg-color-primary;
+    }
+}
+//Section Call to Action (CTA)
+.cta {
+    text-align: center;
+    padding: 5vh 8vw;
+}
+// Section footer
+.footer {
+    height: 15vh;
+    text-align: center;
+    .icon-spacing {
+        padding: 6vh 2vw 2vh;
+        color: black;
+        &:hover {
+            color: $bg-color-primary
+        }
+    }
+}
+// Navbar 
+.nav__custom-bg {
+    background-color: rgba($bg-color-primary, 1);
+    padding-left: 5%;
+    padding-top: 1rem;
+}
+// Download Buttons
+.btn__custom {
+    margin: 5% 3% 5% 0;
+}
